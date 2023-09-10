@@ -1,0 +1,35 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 0 2rem;
+    width: 90vw;
+    height: 25vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header_logo-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    font-size: 2rem;
+}
+
+.header_price-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 95vw;
+}
+
+span{
+    margin-right: .5rem;
+}

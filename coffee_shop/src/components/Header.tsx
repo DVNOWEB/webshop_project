@@ -1,4 +1,8 @@
-import Nav from "./Nav"
+import Nav from './Nav'
+import useCart from '../hooks/useCart'
+import '../styles/Header.css'
+
+import { FaShoppingCart } from 'react-icons/fa'
 
 type PropsType = {
   viewCart: boolean
@@ -6,21 +10,28 @@ type PropsType = {
 }
 
 const Header = ({ viewCart, setViewCart }: PropsType) => {
+  // we are using the useCart hook to get the totalItems and totalPrice
+  const { totalItems, totalPrice } = useCart()
 
   const content = (
-    <header className="header" >
-      <div className="header_logo-box">
-        <h1>Coffee Shop</h1>
-        <div className="header_price-box">
-          <p>Total items: 3</p>
-          <p>Total price: 10€</p>
+    <>
+      <header className="header">
+        <div className="header_logo-box">
+          <h1>Coffee Shop.</h1>
         </div>
-      </div>
-      <Nav viewCart={viewCart} setViewCart={setViewCart} />
-    </header>
+        <div className="nav">
+          <FaShoppingCart />
+          <Nav viewCart={viewCart} setViewCart={setViewCart} />
+        </div>
+      </header>
 
+      <div className="header_price-box">
+        <span>Total items: {totalItems}</span>
+        <span>Total price: {totalPrice}</span>
+      </div>
+    </>
   )
-  
+
   return content
 }
 export default Header
