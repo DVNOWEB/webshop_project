@@ -15,7 +15,7 @@ const initState: ProductType[] = [
     sku: 'p1.jpeg',
     id: 1,
     name: 'Espresso',
-    price: 100,
+    price: 1.2,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mauris volutpat, convallis nibh.',
   },
@@ -23,7 +23,7 @@ const initState: ProductType[] = [
     sku: 'p2.jpg',
     id: 2,
     name: 'Doppio',
-    price: 200,
+    price: 2,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mauris volutpat, convallis nibh.',
   },
@@ -31,7 +31,7 @@ const initState: ProductType[] = [
     sku: 'p3.jpg',
     id: 3,
     name: 'Macchiato',
-    price: 300,
+    price: 2.5,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mauris volutpat, convallis nibh.',
   },
@@ -39,7 +39,7 @@ const initState: ProductType[] = [
     sku: 'p4.jpg',
     id: 4,
     name: 'Americano',
-    price: 400,
+    price: 2,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mauris volutpat, convallis nibh.',
   },
@@ -47,7 +47,7 @@ const initState: ProductType[] = [
     sku: 'p5.jpg',
     id: 5,
     name: 'Cappuccino',
-    price: 500,
+    price: 3,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mauris volutpat, convallis nibh.',
   },
@@ -55,7 +55,7 @@ const initState: ProductType[] = [
     sku: 'p6.jpg',
     id: 6,
     name: 'Latte',
-    price: 600,
+    price: 3.5,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mauris volutpat, convallis nibh.',
   },
@@ -63,7 +63,7 @@ const initState: ProductType[] = [
     sku: 'p7.jpg',
     id: 7,
     name: 'Affogato',
-    price: 700,
+    price: 4.5,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mauris volutpat, convallis nibh.',
   },
@@ -71,7 +71,7 @@ const initState: ProductType[] = [
     sku: 'p8.jpeg',
     id: 8,
     name: 'Mocha',
-    price: 800,
+    price: 3.3,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mauris volutpat, convallis nibh.',
   },
@@ -79,7 +79,7 @@ const initState: ProductType[] = [
     sku: 'p9.jpg',
     id: 9,
     name: 'Flat White',
-    price: 900,
+    price: 3,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mauris volutpat, convallis nibh.',
   },

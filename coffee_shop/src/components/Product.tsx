@@ -1,6 +1,7 @@
 import { ProductType } from '../context/ProductsProvider'
 import { ReducerActionType, ReducerAction } from '../context/CartProvider'
 import { BsCheck2Square } from 'react-icons/bs'
+import { ReactElement, memo } from 'react'
 
 import '../styles/Product.css'
 
@@ -12,7 +13,7 @@ type PropsType = {
 }
 
 // we are destructuring the props object to get the product, dispatch, REDUCER_ACTIONS, and inCart
-const Product = ({ product, dispatch, REDUCER_ACTIONS, inCart }: PropsType) => {
+const Product = ({ product, dispatch, REDUCER_ACTIONS, inCart }: PropsType): ReactElement => {
   const img: string = new URL(`../images/${product.sku}`, import.meta.url).href
 
   const onAddToCart = () =>
@@ -35,7 +36,7 @@ const Product = ({ product, dispatch, REDUCER_ACTIONS, inCart }: PropsType) => {
           {itemInCart}
         </span>
         </span>
-        <button onClick={onAddToCart}>Add to Cart</button>
+        <button className='add_to_cart-btn' onClick={onAddToCart}>Add to Cart</button>
       </div>
     </article>
   )
@@ -43,4 +44,13 @@ const Product = ({ product, dispatch, REDUCER_ACTIONS, inCart }: PropsType) => {
   return content
 }
 
-export default Product
+function areProductsEquel({ product: prevProduct, inCart: prevInCart }: PropsType, { product: nextProduct, inCart: nextInCart }: PropsType) {
+  return (
+    Object.keys(prevProduct).every(key => {
+      return prevProduct[key as keyof ProductType] === nextProduct[key as keyof ProductType]
+    }) && prevInCart === nextInCart
+  )
+}
+const MemoizedProduct = memo<typeof Product>(Product, areProductsEquel)
+
+export default MemoizedProduct

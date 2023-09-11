@@ -1,6 +1,7 @@
 import { ReactElement, ChangeEvent } from 'react'
 import { CartItemType } from '../context/CartProvider'
 import { ReducerActionType, ReducerAction } from '../context/CartProvider'
+import { memo } from 'react'
 
 import '../styles/CartLineItem.css'
 
@@ -43,14 +44,15 @@ const CartLineItem = ({ item, dispatch, REDUCER_ACTIONS }: PropsType) => {
         <img src={img} alt={item.name} className="cart_img" />
       </div>
       <div className="item_box">
-
-        <div aria-label="Price Per Item" className='aria_price'>
+        <div aria-label="Price Per Item" className="aria_price">
           {new Intl.NumberFormat('en-EN', {
             style: 'currency',
             currency: 'EUR',
           }).format(item.price)}
 
-          <div aria-label="Item Name" className='item_name'>{item.name}</div>
+          <div aria-label="Item Name" className="item_name">
+            {item.name}
+          </div>
 
           <label htmlFor="itemQty" className="offscreen">
             Item Quantity
@@ -80,7 +82,6 @@ const CartLineItem = ({ item, dispatch, REDUCER_ACTIONS }: PropsType) => {
             onClick={onRemoveFromCart}>
             Remove
           </button>
-
         </div>
       </div>
     </li>
@@ -88,4 +89,21 @@ const CartLineItem = ({ item, dispatch, REDUCER_ACTIONS }: PropsType) => {
   return content
 }
 
-export default CartLineItem
+function areItemsEqual(
+  { item: prevItem }: PropsType,
+  { item: nextItem }: PropsType
+) {
+  return Object.keys(prevItem).every((key) => {
+    return (
+      prevItem[key as keyof CartItemType] ===
+      nextItem[key as keyof CartItemType]
+    )
+  })
+}
+
+const MemoizedCartLineItem = memo<typeof CartLineItem>(
+  CartLineItem,
+  areItemsEqual
+)
+
+export default MemoizedCartLineItem

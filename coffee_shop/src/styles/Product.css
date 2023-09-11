@@ -46,3 +46,17 @@ span.product_price{
   font-weight: 900;
   color: green;
 }
+
+.add_to_cart-btn{
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 5px 20px #ccc;
+  transition: all 0.3s ease-in-out;
+}
+
+.add_to_cart-btn:hover {
+  box-shadow: 0 0 5px #aaa;
+}
