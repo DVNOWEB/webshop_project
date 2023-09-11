@@ -12,7 +12,7 @@ const Header = ({ viewCart, setViewCart }: PropsType) => {
   const { totalItems, totalPrice } = useCart()
 
   const content = (
-    <>
+    <div className='main_container'>
       <header className="header">
         <div className="header_logo-box">
           <h1>Coffee Shop.</h1>
@@ -26,7 +26,7 @@ const Header = ({ viewCart, setViewCart }: PropsType) => {
         <span>Total items: {totalItems}</span>
         <span>Total price: {totalPrice}</span>
       </div>
-    </>
+    </div>
   )
 
   return content
