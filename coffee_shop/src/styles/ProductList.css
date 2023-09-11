@@ -1,0 +1,15 @@
+main{
+  margin: 0 auto;
+  width: 80%;
+}
+
+.main{
+  --s: 150px; /* control the size */
+  --g: 30px;  /* control the gap */
+  --f: 2.5;   /* control the scale factor */
+
+  display: grid;
+  gap: var(--g);
+  aspect-ratio: 1;
+  grid-template-columns: repeat(3, auto);
+}

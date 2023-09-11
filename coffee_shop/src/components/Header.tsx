@@ -2,8 +2,6 @@ import Nav from './Nav'
 import useCart from '../hooks/useCart'
 import '../styles/Header.css'
 
-import { FaShoppingCart } from 'react-icons/fa'
-
 type PropsType = {
   viewCart: boolean
   setViewCart: React.Dispatch<React.SetStateAction<boolean>>
@@ -20,7 +18,6 @@ const Header = ({ viewCart, setViewCart }: PropsType) => {
           <h1>Coffee Shop.</h1>
         </div>
         <div className="nav">
-          <FaShoppingCart />
           <Nav viewCart={viewCart} setViewCart={setViewCart} />
         </div>
       </header>

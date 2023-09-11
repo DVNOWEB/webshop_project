@@ -1,0 +1,63 @@
+.cart_item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 1rem auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 5px #ccc;
+}
+
+.cart_img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+.aria_price{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 2rem;
+}
+
+.item_name {
+  margin: .5rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.offscreen{
+  margin-bottom: .2rem;
+}
+
+.cart_select{
+  margin: .5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 5px #ccc;
+  outline: none;
+}
+
+.cart_item-subtotal{
+  margin: 2rem 0 .5rem 0;
+}
+
+.cart_item-remove{
+  padding: 5px 30px;
+  background-color: rgb(245, 131, 131);
+  border: none;
+  border-radius: .5rem;
+  transition: all .3s ease-in-out;
+}
+
+.cart_item-remove:hover{
+  color: #fff;
+  background-color: rgba(236, 33, 33, 0.8);
+}

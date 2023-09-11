@@ -1,0 +1,15 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem auto;
+    padding: 0 1rem;
+    width: 80vw;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+    position: static;
+    bottom: 0;
+    right: 10vw;
+}
+

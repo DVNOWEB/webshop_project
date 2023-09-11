@@ -1,0 +1,35 @@
+.coffee_btn{
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: .5rem;
+    color: rgb(90, 48, 4);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5rem;
+    transition: all .5s;
+}
+
+.coffee_btn:hover{
+    background-color: #e6e6e6;
+    color: rgb(90, 48, 4);
+}
+
+.back_btn{
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: .5rem;
+    color: rgb(90, 48, 4);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5rem;
+    transition: all .5s;
+}
+
+.back_btn:hover{
+    background-color: #e6e6e6;
+    color: rgb(90, 48, 4);
+}
