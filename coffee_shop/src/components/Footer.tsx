@@ -4,7 +4,6 @@ import '../styles/Footer.css'
 
 type PropsType = {
   viewCart: boolean
-  setViewCart: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 const Footer = ({ viewCart }: PropsType) => {
