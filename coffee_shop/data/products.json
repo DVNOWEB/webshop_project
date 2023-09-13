@@ -5,63 +5,63 @@
       "id": 1,
       "name": "Espresso",
       "price": 100,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mauris volutpat, convallis nibh."
+      "description": "The simplest espresso drink is a single shot of espresso. To make one, you use a single shot filter and about six to eight grams of finely-ground coffee."
     },
     {
       "sku": "p2.jpg",
       "id": 2,
       "name": "Doppio",
       "price": 200,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mauris volutpat, convallis nibh."
+      "description": "This is another word for a double shot, made with a larger amount of coffee grounds. These espresso shots are pulled using a double shot filter inside the portafilter."
     },
     {
       "sku": "p3.jpg",
       "id": 3,
       "name": "Macchiato",
       "price": 300,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mauris volutpat, convallis nibh."
+      "description": "An espresso macchiato is made by adding a small amount of steamed milk and foam to a shot of espresso. This is one of our favorite types of espresso drinks!"
     },
     {
       "sku": "p4.jpg",
       "id": 4,
       "name": "Americano",
       "price": 400,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mauris volutpat, convallis nibh."
+      "description": "An Americano has a similar strength to a cup of regular black coffee but is made by adding hot water to a single or double shot of espresso. This results in a different flavor from traditional black coffee."
     },
     {
       "sku": "p5.jpg",
       "id": 5,
       "name": "Cappuccino",
       "price": 500,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mauris volutpat, convallis nibh."
+      "description": "A cappuccino is made with a ratio of one-third espresso, one-third hot milk, and one-third milk foam. For a version with less milk, try ordering a dry cappuccino."
     },
     {
       "sku": "p6.jpg",
       "id": 6,
       "name": "Latte",
       "price": 600,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mauris volutpat, convallis nibh."
+      "description": "A caffé latte, often shortened to latte, is made of one-third espresso, two-thirds hot milk, and a topping of micro-foam. These are often made with double shots of espresso and may be topped with cinnamon, brown sugar, or cocoa powder."
     },
     {
       "sku": "p7.jpg",
       "id": 7,
       "name": "Affogato",
       "price": 700,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mauris volutpat, convallis nibh."
+      "description": "An affogato is more of a dessert than a drink. This delicious dessert is made by pouring a shot of espresso over a scoop of ice cream."
     },
     {
       "sku": "p8.jpeg",
       "id": 8,
       "name": "Mocha",
       "price": 800,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mauris volutpat, convallis nibh."
+      "description": "This is a sweet coffee drink, consisting of a latte with chocolate syrup or cocoa powder added. If you like your coffee sweet, you may also want to try adding caramel or peppermint syrup. And don’t forget to top with whipped cream!"
     },
     {
       "sku": "p9.jpg",
       "id": 9,
       "name": "Flat White",
       "price": 900,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mauris volutpat, convallis nibh."
+      "description": "Flat whites are popular in Australia and New Zealand. These drinks are similar to cappuccinos, but with a higher coffee-to-milk ratio and prepared without milk foam."
     }
   ]
 }

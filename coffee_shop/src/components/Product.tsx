@@ -31,7 +31,12 @@ const Product = ({ product, dispatch, REDUCER_ACTIONS, inCart }: PropsType): Rea
   const content = (
     <article className="product">
       <h3>{product.name}</h3>
-      <img className="product_img" src={img} alt={product.name} onClick={toggleDetails} />
+      <img
+        className="product_img"
+        src={img}
+        alt={product.name}
+        onClick={toggleDetails}
+      />
       <div className="add_to_cart">
         <span className="product_price">
           {new Intl.NumberFormat('en-EN', {
@@ -44,7 +49,9 @@ const Product = ({ product, dispatch, REDUCER_ACTIONS, inCart }: PropsType): Rea
           Add to Cart
         </button>
       </div>
-      {showDetails && <ProductDetails product={product} onClick={toggleDetails} />}
+      {showDetails && (
+        <ProductDetails product={product} onClose={toggleDetails} />
+      )}
     </article>
   )
 
