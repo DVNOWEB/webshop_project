@@ -1,6 +1,5 @@
 import useCart from '../hooks/useCart'
 import useProducts from '../hooks/useProducts'
-// import { UseProductsContextType } from '../context/ProductsProvider'
 import { ReactElement } from 'react'
 import Product from './Product'
 
@@ -16,6 +15,7 @@ const ProductList = () => {
       <p>Loading...</p>
     </div>
   )
+
 
   if (products?.length) {
     pageContent = products.map((product) => {
@@ -34,11 +34,7 @@ const ProductList = () => {
   }
 
   // if we have products, we will map over them and render a Product component for each product
-  const content = (
-    <main className="main main_product">
-      {pageContent}
-    </main>
-  )
+  const content = <main className="main main_product">{pageContent}</main>
 
   return content
 }

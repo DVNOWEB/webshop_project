@@ -18,15 +18,38 @@ const AddProduct = () => {
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
     if (file) {
-      // You can handle uploading the image here and store the URL in the product state.
+      const imageUrl = URL.createObjectURL(file)
+      setProduct({ ...product, image: imageUrl })
     }
   }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle submitting the product data, e.g., sending it to an API.
-    // You can use a state management library like Redux or useContext to manage the product list.
-    // Make an API call to add the product.
+
+    // Generate a unique identifier for the product (e.g., using a timestamp)
+    const productId = Date.now()
+
+    // Combine product details with the unique identifier
+    const newProduct = { ...product, id: productId }
+
+    // Retrieve existing products from local storage (if any)
+    const existingProducts = JSON.parse(
+      localStorage.getItem('products') || '[]'
+    )
+
+    // Add the new product to the existing products array
+    const updatedProducts = [...existingProducts, newProduct]
+
+    // Store the updated products array back in local storage
+    localStorage.setItem('products', JSON.stringify(updatedProducts))
+
+    // Clear the form or perform any other necessary actions
+    setProduct({
+      name: '',
+      price: 0,
+      description: '',
+      image: '',
+    })
   }
 
   return (

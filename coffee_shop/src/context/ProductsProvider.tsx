@@ -113,6 +113,7 @@ export const ProductsProvider = ({ children }: ChildrenType): ReactElement => {
 
   //   fetchProducts().then(products => setProducts(products))
   // }, [])
+  
 
 
   return (
