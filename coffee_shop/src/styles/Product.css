@@ -1,5 +1,3 @@
-/* Make image  size 300X300px and below align p tag and button on right size below image, product name i wont to align on the left */
-
 .product {
   display: flex;
   flex-direction: column;
@@ -17,13 +15,13 @@
   object-fit: cover;
   cursor: pointer;
   filter: sepia(80%);
-  transition: .35s linear;
+  transition: .5s linear;
+  box-shadow: 0 10px 20px #7b7b7b;
 }
 
 .product_img:hover {
-  filter: sepia(0);
-  width:  calc(var(--s)*var(--f));
-  height: calc(var(--s)*var(--f));
+  filter: sepia(0%);
+  transform: scale(0.95);
 }
 
 .add_to_cart {

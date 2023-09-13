@@ -17,7 +17,6 @@
 }
 
 .back_btn {
-  background-color: #f2f2f2;
   border: none;
   border-radius: 0.5rem;
   color: rgb(90, 48, 4);
@@ -26,10 +25,11 @@
   text-decoration: none;
   display: inline-block;
   font-size: 1.5rem;
-  transition: all 0.5s;
+  box-shadow: 0 5px 20px #ccc;
+  transition: all 0.3s ease-in-out;
 }
 
 .back_btn:hover {
-  background-color: #e6e6e6;
+  box-shadow: 0 0 5px #aaa;
   color: rgb(90, 48, 4);
 }
