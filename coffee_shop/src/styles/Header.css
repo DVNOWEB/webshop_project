@@ -1,52 +1,74 @@
-.main_container{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    margin: auto;
-    max-width: 80vw;
+.main_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin: auto;
+  max-width: 80vw;
 }
 
-.header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1rem auto;
-    padding: 0 1rem;
-    width: 80vw;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  width: 80vw;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.header_logo-box{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-left: 2rem;
-    width: 10vw;
+.header_logo-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+  width: 10vw;
 }
 
-h1{
-    font-size: 3rem;
-    font-weight: 900;
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
 }
 
-.nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
-.header_price-box{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: 80vw;
+.header_inline-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
 }
 
-span{
-    margin-right: .5rem;
+.add_new_product-btn {
+  
+  padding: 0.5rem 3rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 5px 20px #ccc;
+  transition: all 0.3s ease-in-out;
+}
+
+.add_new_product-btn:hover {
+  box-shadow: 0 0 5px #aaa;
+}
+
+.header_price-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 80vw;
+}
+
+span {
+  margin-right: 0.5rem;
 }
