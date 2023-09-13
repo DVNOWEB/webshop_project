@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import '../styles/AddProduct.css'
 
 const AddProduct = () => {
   const [product, setProduct] = useState({
@@ -53,8 +54,11 @@ const AddProduct = () => {
   }
 
   return (
-    <div>
-      <h2>Add New Product</h2>
+    <div className="add_products-container">
+      <div>
+        <h2>Add New Product</h2>
+      </div>
+      
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>
@@ -91,6 +95,7 @@ const AddProduct = () => {
         <div>
           <label htmlFor="image">Image:</label>
           <input
+            className='image-input'
             type="file"
             id="image"
             name="image"
@@ -99,7 +104,7 @@ const AddProduct = () => {
             required
           />
         </div>
-        <button type="submit">Add Product</button>
+        <button className='submit_new_product-btn' type="submit">Add Product</button>
       </form>
     </div>
   )
