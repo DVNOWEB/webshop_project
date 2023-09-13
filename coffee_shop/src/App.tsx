@@ -12,11 +12,9 @@ function App() {
 
   return (
     <>
-      <div>
-        <Header viewCart={viewCart} setViewCart={setViewCart} />
-        {pageContent}
-        <Footer viewCart={viewCart} />
-      </div>
+      <Header viewCart={viewCart} setViewCart={setViewCart} />
+      {pageContent}
+      <Footer viewCart={viewCart} />
     </>
   )
 }
