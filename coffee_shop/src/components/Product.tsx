@@ -12,15 +12,23 @@ type PropsType = {
   REDUCER_ACTIONS: ReducerActionType
   inCart: boolean
 }
-
+export const getImageUrl = (sku: string): string => {
+  if(sku.includes ('http' || 'https')){
+    return sku
+  } else{
+    return new URL(`../images/${sku}`, import.meta.url).href
+  } 
+}
 // we are destructuring the props object to get the product, dispatch, REDUCER_ACTIONS, and inCart
+
+
 const Product = ({
   product,
   dispatch,
   REDUCER_ACTIONS,
   inCart,
 }: PropsType): ReactElement => {
-  const img: string = new URL(`../images/${product.sku}`, import.meta.url).href
+  const img = getImageUrl(product.sku)
 
   const [showDetails, setShowDetails] = useState(false)
 

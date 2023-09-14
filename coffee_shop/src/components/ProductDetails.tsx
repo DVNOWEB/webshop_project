@@ -1,5 +1,7 @@
 import { ProductType } from '../context/ProductsProvider'
 import '../styles/ProductDetails.css'
+import { getImageUrl } from './Product'
+
 
 type ProductDetailsProps = {
   product: ProductType
@@ -8,7 +10,7 @@ type ProductDetailsProps = {
 
 
 const ProductDetails = ({ product, onClose }: ProductDetailsProps) => {
-  const imgSrc: string = new URL(`../images/${product.sku}`, import.meta.url).href
+  const imgSrc: string = getImageUrl(product.sku)
 
   return (
     <div className="modal_overlay">

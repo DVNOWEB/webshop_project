@@ -4,6 +4,7 @@ import { ReducerActionType, ReducerAction } from '../context/CartProvider'
 import { memo } from 'react'
 
 import '../styles/CartLineItem.css'
+import { getImageUrl } from './Product'
 
 type PropsType = {
   item: CartItemType
@@ -12,7 +13,8 @@ type PropsType = {
 }
 
 const CartLineItem = ({ item, dispatch, REDUCER_ACTIONS }: PropsType) => {
-  const img: string = new URL(`../images/${item.sku}`, import.meta.url).href
+  // const img: string = new URL(`../images/${item.sku}`, import.meta.url).href
+  const imgSrc: string = getImageUrl(item.sku)
 
   const lineTotal: number = item.qty * item.price
 
@@ -41,7 +43,7 @@ const CartLineItem = ({ item, dispatch, REDUCER_ACTIONS }: PropsType) => {
   const content = (
     <li className="cart_item">
       <div className="img_div">
-        <img src={img} alt={item.name} className="cart_img" />
+        <img src={imgSrc} alt={item.name} className="cart_img" />
       </div>
       <div className="item_box">
         <div aria-label="Price Per Item" className="aria_price">

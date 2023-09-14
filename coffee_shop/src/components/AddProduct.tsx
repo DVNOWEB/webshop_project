@@ -21,11 +21,10 @@ const AddProduct = () => {
   }
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]
-    if (file) {
-      setProduct({ ...product, sku: file.name })
-    }
+    setProduct({ ...product, sku: e.target.value })
   }
+
+  console.log(product)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -35,11 +34,6 @@ const AddProduct = () => {
 
     // Combine product details with the unique identifier
     const newProduct = { ...product, id: productId }
-
-    // Retrieve existing products from local storage (if any)
-    const existingProducts = JSON.parse(
-      localStorage.getItem('products') || '[]'
-    )
 
     // Add the new product to the existing products array
     const updatedProducts = [...products, newProduct]
@@ -98,10 +92,10 @@ const AddProduct = () => {
           />
         </div>
         <div>
-          <label htmlFor="image">Image:</label>
+          <label htmlFor="image">Enter image URL:</label>
           <input
             className="image-input"
-            type="file"
+            type="url"
             id="image"
             name="image"
             accept="image/*"
