@@ -8,7 +8,7 @@ const AddProduct = () => {
     name: '',
     price: 0,
     description: '',
-    image: null as null | File,
+    sku: '',
   })
 
   const { products } = useContext(ProductsContext)
@@ -23,7 +23,7 @@ const AddProduct = () => {
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
     if (file) {
-      setProduct({ ...product, image: file })
+      setProduct({ ...product, sku: file.name })
     }
   }
 
@@ -52,8 +52,10 @@ const AddProduct = () => {
       name: '',
       price: 0,
       description: '',
-      image: null,
+      sku: '',
     })
+
+    window.location.href = '/'
   }
 
   return (
