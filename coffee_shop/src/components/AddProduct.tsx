@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import ProductsContext from '../context/ProductsProvider'
+
 import '../styles/AddProduct.css'
 
 const AddProduct = () => {
@@ -6,8 +8,10 @@ const AddProduct = () => {
     name: '',
     price: 0,
     description: '',
-    image: '',
+    image: null as null | File,
   })
+
+  const { products } = useContext(ProductsContext)
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -19,8 +23,7 @@ const AddProduct = () => {
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
     if (file) {
-      const imageUrl = URL.createObjectURL(file)
-      setProduct({ ...product, image: imageUrl })
+      setProduct({ ...product, image: file })
     }
   }
 
@@ -39,7 +42,7 @@ const AddProduct = () => {
     )
 
     // Add the new product to the existing products array
-    const updatedProducts = [...existingProducts, newProduct]
+    const updatedProducts = [...products, newProduct]
 
     // Store the updated products array back in local storage
     localStorage.setItem('products', JSON.stringify(updatedProducts))
@@ -49,7 +52,7 @@ const AddProduct = () => {
       name: '',
       price: 0,
       description: '',
-      image: '',
+      image: null,
     })
   }
 

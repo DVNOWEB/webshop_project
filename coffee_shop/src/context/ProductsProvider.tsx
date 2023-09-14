@@ -6,6 +6,7 @@ export type ProductType = {
   name: string
   price: number
   description: string
+  image: string
 }
 
 export type UseProductsContextType = { products: ProductType[] }

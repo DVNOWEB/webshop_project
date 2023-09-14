@@ -14,7 +14,12 @@ type PropsType = {
 }
 
 // we are destructuring the props object to get the product, dispatch, REDUCER_ACTIONS, and inCart
-const Product = ({ product, dispatch, REDUCER_ACTIONS, inCart }: PropsType): ReactElement => {
+const Product = ({
+  product,
+  dispatch,
+  REDUCER_ACTIONS,
+  inCart,
+}: PropsType): ReactElement => {
   const img: string = new URL(`../images/${product.sku}`, import.meta.url).href
 
   const [showDetails, setShowDetails] = useState(false)
@@ -58,10 +63,16 @@ const Product = ({ product, dispatch, REDUCER_ACTIONS, inCart }: PropsType): Rea
   return content
 }
 
-function areProductsEquel({ product: prevProduct, inCart: prevInCart }: PropsType, { product: nextProduct, inCart: nextInCart }: PropsType) {
+function areProductsEquel(
+  { product: prevProduct, inCart: prevInCart }: PropsType,
+  { product: nextProduct, inCart: nextInCart }: PropsType
+) {
   return (
-    Object.keys(prevProduct).every(key => {
-      return prevProduct[key as keyof ProductType] === nextProduct[key as keyof ProductType]
+    Object.keys(prevProduct).every((key) => {
+      return (
+        prevProduct[key as keyof ProductType] ===
+        nextProduct[key as keyof ProductType]
+      )
     }) && prevInCart === nextInCart
   )
 }
