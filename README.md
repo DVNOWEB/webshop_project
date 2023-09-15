@@ -1,4 +1,4 @@
-💻 webshop_project
+💻 webshop_project Vite - TypeScript - React
 
 👉🏼 cd coffee_shop
 
