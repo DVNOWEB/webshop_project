@@ -29,27 +29,6 @@ export const ProductsProvider = ({ children }: ChildrenType): ReactElement => {
     }
   }, [])
 
-  // useEffect(() => {
-  //   const fetchProducts = async (): Promise<ProductType[]> => {
-  //     try {
-  //       // Fetch the data from the imported JSON file
-  //       const data = await fetch('/data/products.json')
-  //       if (!data.ok) {
-  //         throw new Error('Failed to fetch products')
-  //       }
-  //       const productsData = await data.json()
-  //       return productsData.products // Assuming the products are stored in a 'products' property
-  //     } catch (error) {
-  //       console.error('Error fetching products:', error)
-  //       return []
-  //     }
-  //   }
-
-  //   fetchProducts().then((fetchedProducts) => {
-  //     setProducts(fetchedProducts)
-  //   })
-  // }, [])
-
   return (
     <ProductsContext.Provider value={{ products }}>
       {children}
