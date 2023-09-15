@@ -1,5 +1,5 @@
-# webshop_project
+💻 webshop_project
 
-# cd coffee_shop
+👉🏼 cd coffee_shop
 
-# npm run dev
+👉🏼 npm run dev
