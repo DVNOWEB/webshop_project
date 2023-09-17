@@ -4,12 +4,7 @@ import '../styles/Header.css'
 import AddProduct from './AddProduct'
 import { useState } from 'react'
 
-type PropsType = {
-  viewCart: boolean
-  setViewCart: React.Dispatch<React.SetStateAction<boolean>>
-}
-
-const Header = ({ viewCart, setViewCart }: PropsType) => {
+const Header = ({ viewCart, setViewCart }: PropsTypeNav) => {
   // we are using the useCart hook to get the totalItems and totalPrice
   const { totalItems, totalPrice } = useCart()
 

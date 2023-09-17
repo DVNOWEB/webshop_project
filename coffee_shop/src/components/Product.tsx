@@ -1,17 +1,9 @@
-import { ProductType } from '../context/ProductsProvider'
-import { ReducerActionType, ReducerAction } from '../context/CartProvider'
 import { BsCheck2Square } from 'react-icons/bs'
 import { ReactElement, memo, useState } from 'react'
 import ProductDetails from './ProductDetails'
 
 import '../styles/Product.css'
 
-type PropsType = {
-  product: ProductType
-  dispatch: React.Dispatch<ReducerAction>
-  REDUCER_ACTIONS: ReducerActionType
-  inCart: boolean
-}
 export const getImageUrl = (sku: string): string => {
   if(sku.includes ('http' || 'https')){
     return sku
@@ -20,7 +12,6 @@ export const getImageUrl = (sku: string): string => {
   } 
 }
 // we are destructuring the props object to get the product, dispatch, REDUCER_ACTIONS, and inCart
-
 
 const Product = ({
   product,

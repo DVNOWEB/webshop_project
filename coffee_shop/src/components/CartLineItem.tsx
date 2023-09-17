@@ -1,16 +1,9 @@
 import { ReactElement, ChangeEvent } from 'react'
 import { CartItemType } from '../context/CartProvider'
-import { ReducerActionType, ReducerAction } from '../context/CartProvider'
 import { memo } from 'react'
 
 import '../styles/CartLineItem.css'
 import { getImageUrl } from './Product'
-
-type PropsType = {
-  item: CartItemType
-  dispatch: React.Dispatch<ReducerAction>
-  REDUCER_ACTIONS: ReducerActionType
-}
 
 const CartLineItem = ({ item, dispatch, REDUCER_ACTIONS }: PropsType) => {
   // const img: string = new URL(`../images/${item.sku}`, import.meta.url).href

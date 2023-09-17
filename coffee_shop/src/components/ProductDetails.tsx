@@ -1,13 +1,5 @@
-import { ProductType } from '../context/ProductsProvider'
 import '../styles/ProductDetails.css'
 import { getImageUrl } from './Product'
-
-
-type ProductDetailsProps = {
-  product: ProductType
-  onClose: () => void
-}
-
 
 const ProductDetails = ({ product, onClose }: ProductDetailsProps) => {
   const imgSrc: string = getImageUrl(product.sku)

@@ -1,14 +1,8 @@
 import '../styles/Nav.css'
-
 import { FaCoffee } from 'react-icons/fa'
 import { TiArrowBack } from 'react-icons/ti'
 
-type PropsType = {
-  viewCart: boolean
-  setViewCart: React.Dispatch<React.SetStateAction<boolean>>
-}
-
-const Nav = ({ viewCart, setViewCart }: PropsType) => {
+const Nav = ({ viewCart, setViewCart }: PropsTypeNav) => {
   // ternary operator
   // if viewCart is true, then we will display the cart
   const button = viewCart ? (
