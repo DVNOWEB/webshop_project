@@ -18,7 +18,7 @@ const Product = ({
   dispatch,
   REDUCER_ACTIONS,
   inCart,
-}: PropsType): ReactElement => {
+}: PropsTypeProduct): ReactElement => {
   const img = getImageUrl(product.sku)
 
   const [showDetails, setShowDetails] = useState(false)
@@ -63,8 +63,8 @@ const Product = ({
 }
 
 function areProductsEquel(
-  { product: prevProduct, inCart: prevInCart }: PropsType,
-  { product: nextProduct, inCart: nextInCart }: PropsType
+  { product: prevProduct, inCart: prevInCart }: PropsTypeProduct,
+  { product: nextProduct, inCart: nextInCart }: PropsTypeProduct
 ) {
   return (
     Object.keys(prevProduct).every((key) => {

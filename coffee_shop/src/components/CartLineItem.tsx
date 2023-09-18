@@ -1,11 +1,10 @@
 import { ReactElement, ChangeEvent } from 'react'
-import { CartItemType } from '../context/CartProvider'
 import { memo } from 'react'
 
 import '../styles/CartLineItem.css'
 import { getImageUrl } from './Product'
 
-const CartLineItem = ({ item, dispatch, REDUCER_ACTIONS }: PropsType) => {
+const CartLineItem = ({ item, dispatch, REDUCER_ACTIONS }: PropsTypeCart) => {
   // const img: string = new URL(`../images/${item.sku}`, import.meta.url).href
   const imgSrc: string = getImageUrl(item.sku)
 
@@ -85,8 +84,8 @@ const CartLineItem = ({ item, dispatch, REDUCER_ACTIONS }: PropsType) => {
 }
 
 function areItemsEqual(
-  { item: prevItem }: PropsType,
-  { item: nextItem }: PropsType
+  { item: prevItem }: PropsTypeCart,
+  { item: nextItem }: PropsTypeCart
 ) {
   return Object.keys(prevItem).every((key) => {
     return (

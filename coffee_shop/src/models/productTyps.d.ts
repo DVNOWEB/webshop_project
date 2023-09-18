@@ -6,7 +6,7 @@ type ProductType = {
   description: string
 }
 
-type PropsType = {
+type PropsTypeProduct = {
   product: ProductType
   dispatch: React.Dispatch<ReducerAction>
   REDUCER_ACTIONS: ReducerActionType

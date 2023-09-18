@@ -2,8 +2,8 @@ import useCart from '../hooks/useCart'
 import useProducts from '../hooks/useProducts'
 import { ReactElement } from 'react'
 import Product from './Product'
-
 import '../styles/ProductList.css'
+
 
 const ProductList = () => {
   // dispatch and REDUCER_ACTIONS are used to update the state of the products
@@ -18,8 +18,8 @@ const ProductList = () => {
 
 
   if (products?.length) {
-    pageContent = products.map((product) => {
-      const inCart: boolean = cart.some((item) => item.sku === product.sku)
+    pageContent = products.map((product: ProductType) => {
+      const inCart: boolean = cart.some((item: CartItemType) => item.sku === product.sku)
 
       return (
         <Product
